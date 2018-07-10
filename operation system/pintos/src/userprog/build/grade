@@ -1,0 +1,73 @@
+TOTAL TESTING SCORE: 57.5%
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+SUMMARY BY TEST SET
+
+Test Set                                      Pts Max  % Ttl  % Max
+--------------------------------------------- --- --- ------ ------
+tests/userprog/Rubric.process                   1/  1  30.0%/ 30.0%
+tests/userprog/Rubric.arguments                 4/  4  10.0%/ 10.0%
+tests/userprog/Rubric.systemcalls               7/ 16  17.5%/ 40.0%
+--------------------------------------------- --- --- ------ ------
+Total                                                  57.5%/ 80.0%
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+SUMMARY OF INDIVIDUAL TESTS
+
+Process Creation & Execution (tests/userprog/Rubric.process):
+
+	     1/ 1 tests/userprog/args-none
+
+	- Section summary.
+	      1/  1 tests passed
+	      1/  1 points subtotal
+
+Argument Passing (tests/userprog/Rubric.arguments):
+
+	     1/ 1 tests/userprog/args-single
+	     1/ 1 tests/userprog/args-multiple
+	     1/ 1 tests/userprog/args-many
+	     1/ 1 tests/userprog/args-dbl-space
+
+	- Section summary.
+	      4/  4 tests passed
+	      4/  4 points subtotal
+
+System Calls (tests/userprog/Rubric.systemcalls):
+
+	- "create" system call.
+	     1/ 1 tests/userprog/create-empty
+	     1/ 1 tests/userprog/create-long
+	     1/ 1 tests/userprog/create-normal
+	     1/ 1 tests/userprog/create-exists
+
+	- "open" system call.
+	  ** 0/ 1 tests/userprog/open-missing
+	     1/ 1 tests/userprog/open-normal
+	     1/ 1 tests/userprog/open-twice
+
+	- "read" system call.
+	  ** 0/ 1 tests/userprog/read-normal
+	  ** 0/ 1 tests/userprog/read-zero
+
+	- "write" system call.
+	  ** 0/ 1 tests/userprog/write-normal
+	  ** 0/ 1 tests/userprog/write-zero
+
+	- "close" system call.
+	     1/ 1 tests/userprog/close-normal
+
+	- "exec" system call.
+	  ** 0/ 1 tests/userprog/exec-once
+	  ** 0/ 1 tests/userprog/exec-multiple
+
+	- "wait" system call.
+	  ** 0/ 1 tests/userprog/wait-simple
+	  ** 0/ 1 tests/userprog/wait-twice
+
+	- Section summary.
+	      7/ 16 tests passed
+	      7/ 16 points subtotal
+

@@ -1,0 +1,39 @@
+Makefile:93: Makefile.deps: No such file or directory
+gmake --no-print-directory deps
+flex --outfile=yylex.cpp lexer.l
+flex version 2.5.37 usage statistics:
+  scanner options: -dsvI8 -Cem -oyylex.cpp
+  271/2000 NFA states
+  102/1000 DFA states (536 words)
+  46 rules
+  Compressed tables always back-up
+  1/40 start conditions
+  158 epsilon states, 66 double epsilon states
+  18/100 character classes needed 191/500 words of storage, 0 reused
+  1563 state/nextstate pairs created
+  259/1304 unique/duplicate transitions
+  107/1000 base-def entries created
+  204/2000 (peak 309) nxt-chk entries created
+  20/2500 (peak 235) template nxt-chk entries created
+  0 empty table entries
+  5 protos created
+  5 templates created, 59 uses
+  47/256 equivalence classes created
+  4/256 meta-equivalence classes created
+  0 (3 saved) hash collisions, 160 DFAs equal
+  0 sets of reallocations needed
+  925 total table entries needed
+bison --defines=yyparse.h --output=yyparse.cpp parser.y
+g++ -MM -std=gnu++14 astree.cpp lyutils.cpp string_set.cpp auxlib.cpp main.cpp yylex.cpp yyparse.cpp >>Makefile.deps
+g++ -g -O0 -Wall -Wextra -std=gnu++14 -c astree.cpp
+astree.cpp: In member function ‘void astree::dump_node(FILE*)’:
+astree.cpp:57:23: warning: unknown escape sequence: '\040'
+     fprintf (outfile, "%zd.%zd.%zd %s \(%s)\ \n",
+                       ^
+g++ -g -O0 -Wall -Wextra -std=gnu++14 -c lyutils.cpp
+g++ -g -O0 -Wall -Wextra -std=gnu++14 -c string_set.cpp
+g++ -g -O0 -Wall -Wextra -std=gnu++14 -c auxlib.cpp
+g++ -g -O0 -Wall -Wextra -std=gnu++14 -c main.cpp
+g++ -g -O0 -Wall -Wextra -std=gnu++14 -Wno-sign-compare -c yylex.cpp
+g++ -g -O0 -Wall -Wextra -std=gnu++14 -c yyparse.cpp
+g++ -g -O0 -Wall -Wextra -std=gnu++14 -ooc astree.o lyutils.o string_set.o auxlib.o main.o yylex.o yyparse.o

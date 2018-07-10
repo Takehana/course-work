@@ -1,0 +1,5 @@
+Makefile:56: Makefile.dep: No such file or directory
+gmake --no-print-directory dep
+gmake[1]: *** No rule to make target 'trace.h', needed by 'dep'.  Stop.
+Makefile:49: recipe for target 'Makefile.dep' failed
+gmake: *** [Makefile.dep] Error 2

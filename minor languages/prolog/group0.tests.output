@@ -1,0 +1,21 @@
+GNU Prolog 1.4.4 (64 bits)
+Compiled Sep 26 2016, 00:06:17 with clang
+By Daniel Diaz
+Copyright (C) 1999-2013 Daniel Diaz
+| ?- $Id: group0.tests,v 1.2 2016-11-21 14:06:16-08 - - $
+
+yes
+| ?- compiling /Users/Tomo/Desktop/1/database.pl for byte code...
+/Users/Tomo/Desktop/1/database.pl compiled, 75 lines read - 11115 bytes written, 8 ms
+
+(2 ms) yes
+| ?- compiling /Users/Tomo/Desktop/1/functions.pl for byte code...
+/Users/Tomo/Desktop/1/functions.pl compiled, 86 lines read - 12270 bytes written, 7 ms
+
+(1 ms) yes
+| ?- 
+depart sea Seattle-Tacoma   11:00
+arrive lax Los Angeles      12:55
+
+(1 ms) yes
+| ?- 

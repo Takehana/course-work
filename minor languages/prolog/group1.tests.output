@@ -1,0 +1,38 @@
+GNU Prolog 1.4.4 (64 bits)
+Compiled Sep 26 2016, 00:06:17 with clang
+By Daniel Diaz
+Copyright (C) 1999-2013 Daniel Diaz
+| ?- $Id: group1.tests,v 1.2 2016-11-21 14:06:16-08 - - $
+
+yes
+| ?- compiling /Users/Tomo/Desktop/1/database.pl for byte code...
+/Users/Tomo/Desktop/1/database.pl compiled, 75 lines read - 11115 bytes written, 6 ms
+
+(2 ms) yes
+| ?- compiling /Users/Tomo/Desktop/1/functions.pl for byte code...
+/Users/Tomo/Desktop/1/functions.pl compiled, 86 lines read - 12270 bytes written, 7 ms
+
+(2 ms) yes
+| ?- 
+depart lax Los Angeles      12:00
+arrive atl Atlanta          15:53
+depart atl Atlanta          18:30
+arrive mia Miami            19:41
+
+yes
+| ?- 
+No possible route from sea to bos
+
+no
+| ?- 
+depart bos Boston-Logan     07:30
+arrive nyc New York City    07:53
+depart nyc New York City    11:00
+arrive chi Chicago          12:27
+
+yes
+| ?- 
+No possible route from sjc to dfw
+
+no
+| ?- 

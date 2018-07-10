@@ -1,0 +1,5 @@
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -c graphics.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -c interp.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -c shape.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -c main.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -o gdraw graphics.o interp.o rgbcolor.o shape.o debug.o util.o main.o -lGL -lGLU -lglut -lm

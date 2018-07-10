@@ -1,0 +1,6 @@
+checksource: line length > 144 characters
+   file "HEADER.html": 1 errors: line 15
+checksource: line length > 72 characters
+   file "HEADER.html": 2 errors: lines 15--16
+   file "Makefile.dep": 2 errors: lines 2, 7
+checksource: TOTAL COMPLAINTS: 5

@@ -1,0 +1,51 @@
+Makefile:56: Makefile.dep: No such file or directory
+gmake --no-print-directory dep
+g++ -std=gnu++17 -MM commands.cpp debug.cpp file_sys.cpp util.cpp main.cpp >>Makefile.dep
+cpplint.py.perl commands.cpp
+Done processing commands.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -c commands.cpp
+In file included from commands.h:9:0,
+                 from commands.cpp:3:
+file_sys.h: In member function ‘virtual std::map<std::basic_string<char>, std::shared_ptr<inode> >& plain_file::get_dirents()’:
+file_sys.h:134:52: warning: no return statement in function returning non-void [-Wreturn-type]
+     virtual map<string, inode_ptr>& get_dirents() {}
+                                                    ^
+commands.cpp: In function ‘void fn_nothing(inode_state&, const wordvec&)’:
+commands.cpp:314:30: warning: unused parameter ‘state’ [-Wunused-parameter]
+ void fn_nothing(inode_state& state, const wordvec& words) {}
+                              ^~~~~
+commands.cpp:314:52: warning: unused parameter ‘words’ [-Wunused-parameter]
+ void fn_nothing(inode_state& state, const wordvec& words) {}
+                                                    ^~~~~
+cpplint.py.perl debug.cpp
+Done processing debug.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -c debug.cpp
+cpplint.py.perl file_sys.cpp
+Done processing file_sys.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -c file_sys.cpp
+In file included from file_sys.cpp:12:0:
+file_sys.h: In member function ‘virtual std::map<std::basic_string<char>, std::shared_ptr<inode> >& plain_file::get_dirents()’:
+file_sys.h:134:52: warning: no return statement in function returning non-void [-Wreturn-type]
+     virtual map<string, inode_ptr>& get_dirents() {}
+                                                    ^
+file_sys.cpp: In member function ‘virtual void plain_file::readfile(const string&) const’:
+file_sys.cpp:86:41: warning: unused parameter ‘filename’ [-Wunused-parameter]
+ void plain_file::readfile(const string& filename) const {
+                                         ^~~~~~~~
+file_sys.cpp: In member function ‘virtual inode_ptr plain_file::mkdir(const string&, inode_state&)’:
+file_sys.cpp:108:58: warning: unused parameter ‘state’ [-Wunused-parameter]
+ inode_ptr plain_file::mkdir (const string&, inode_state& state) {
+                                                          ^~~~~
+cpplint.py.perl util.cpp
+Done processing util.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -c util.cpp
+cpplint.py.perl main.cpp
+Done processing main.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -c main.cpp
+In file included from commands.h:9:0,
+                 from main.cpp:11:
+file_sys.h: In member function ‘virtual std::map<std::basic_string<char>, std::shared_ptr<inode> >& plain_file::get_dirents()’:
+file_sys.h:134:52: warning: no return statement in function returning non-void [-Wreturn-type]
+     virtual map<string, inode_ptr>& get_dirents() {}
+                                                    ^
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -o yshell commands.o debug.o file_sys.o util.o main.o
